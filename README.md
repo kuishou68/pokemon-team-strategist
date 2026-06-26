@@ -17,6 +17,10 @@
 - **图片代理**：`/api/sprite/:id`（SSRF 收口 + 磁盘/内存缓存），解决 raw.githubusercontent 国内访问慢；失败 fallback 精灵球占位。
 - **游戏风主题**：像素字体、蓝白描边对话框、红蓝主题、仿游戏 HP 条、精灵球 loading + CC0 chiptune BGM（默认静音，右上角开关）。
 
+<img width="2406" height="1982" alt="ScreenShot_2026-06-26_151258_978" src="https://github.com/user-attachments/assets/9a15019b-2f04-4863-8559-73594477d3c0" />
+<img width="3066" height="1976" alt="ScreenShot_2026-06-26_151151_001" src="https://github.com/user-attachments/assets/ee339197-01c8-4c59-82c9-f44293213043" />
+
+
 ## 技术栈
 
 - 后端：Node.js + Express + TypeScript，`openai` SDK 走 OpenRouter，SSE。
@@ -76,6 +80,8 @@ npm test        # 运行全部单测（server + web，不依赖真实 key）
 - 「对手派出喷火龙，我该换谁？」→ 对战换人建议（代码评分排序）
 - 「伊布的进化链」→ 8 分支进化树
 - 右侧「对战助手」输入对手 → 自动转成对话发给 Agent
+<img width="750" height="1630" alt="ScreenShot_2026-06-26_151555_408" src="https://github.com/user-attachments/assets/f482148a-0c3f-4e24-ad00-419781e9245f" />
+<img width="756" height="1632" alt="ScreenShot_2026-06-26_151459_373" src="https://github.com/user-attachments/assets/f5696c55-eb91-4a4e-8bd5-0765848ca71d" />
 
 ## 音频
 
