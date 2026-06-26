@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.env
+.env.local
+.omc/
+*.log
+.DS_Store
+server/.sprite-cache/
+coverage/

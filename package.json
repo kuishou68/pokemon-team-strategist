@@ -1,0 +1,19 @@
+{
+  "name": "pokemon-team-strategist",
+  "version": "1.0.0",
+  "private": true,
+  "description": "宝可梦队伍策略师 — AI Agent + PokeAPI 队伍策略助手",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -n server,web -c blue,magenta \"npm run dev -w server\" \"npm run dev -w web\"",
+    "build": "npm run build -w server && npm run build -w web",
+    "test": "npm run test -w server && npm run test -w web",
+    "start": "npm run start -w server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.0"
+  }
+}

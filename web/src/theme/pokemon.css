@@ -1,0 +1,133 @@
+/* ============================================================
+   宝可梦游戏风主题：像素字体 / 蓝白描边对话框 / 红蓝主题 / HP 条 / 精灵球 loading
+   借鉴设计语言，不搬运官方素材。
+   ============================================================ */
+
+.font-pixel {
+  font-family: 'Press Start 2P', monospace;
+  letter-spacing: 0.5px;
+}
+
+/* 经典蓝白描边对话框 */
+.gb-dialog {
+  background: #fff;
+  border: 4px solid #2a2a4a;
+  border-radius: 12px;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25), inset 0 0 0 2px #5b8dd9;
+  position: relative;
+}
+
+/* 厚边卡片 */
+.gb-card {
+  background: #fff;
+  border: 3px solid #2a2a4a;
+  border-radius: 10px;
+  box-shadow: 3px 3px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.gb-panel {
+  background: #f7f9ff;
+  border: 3px solid #2a2a4a;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 2px #ffde00;
+}
+
+/* 仿游戏 HP/种族值条 */
+.stat-bar-track {
+  background: #3a3a3a;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 10px;
+}
+.stat-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.6s ease-out;
+}
+
+/* 精灵球 loading */
+.pokeball-spin {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background:
+    linear-gradient(#ee1515 0 0) top / 100% 50% no-repeat,
+    linear-gradient(#fff 0 0) bottom / 100% 50% no-repeat;
+  border: 3px solid #2a2a4a;
+  position: relative;
+  animation: pokeball-roll 0.9s linear infinite;
+}
+.pokeball-spin::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border: 3px solid #2a2a4a;
+  border-radius: 50%;
+}
+@keyframes pokeball-roll {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 空槽位精灵球占位 */
+.pokeball-slot {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background:
+    linear-gradient(#f3b6b6 0 0) top / 100% 50% no-repeat,
+    linear-gradient(#eee 0 0) bottom / 100% 50% no-repeat;
+  border: 3px dashed #9aa;
+  opacity: 0.5;
+  position: relative;
+}
+.pokeball-slot::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 22%;
+  height: 22%;
+  background: #fff;
+  border: 3px solid #9aa;
+  border-radius: 50%;
+}
+
+/* 宝可梦出场滑入动画 */
+@keyframes slide-in {
+  from {
+    transform: translateY(12px) scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+.animate-slide-in {
+  animation: slide-in 0.35s ease-out;
+}
+
+/* 短板高亮脉冲 */
+@keyframes weak-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(238, 21, 21, 0.5); }
+  50% { box-shadow: 0 0 0 4px rgba(238, 21, 21, 0); }
+}
+.weak-highlight {
+  animation: weak-pulse 1.6s ease-in-out infinite;
+}
+
+/* 滚动条美化 */
+.thin-scroll::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: #5b8dd9;
+  border-radius: 4px;
+}
